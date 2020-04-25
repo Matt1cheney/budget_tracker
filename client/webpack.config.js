@@ -14,6 +14,8 @@ const config = {
   mode: "development",
   plugins: [
     new WebpackPwaManifest({
+      fingerprints: false,
+      inject: false,
       name: "Budget Tracker",
       short_name: "Budget Tracker",
       description: " This application allows you to track your funds and keep a good budget.",
