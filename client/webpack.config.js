@@ -3,9 +3,9 @@ const path = require("path");
 
 const config = {
   entry: {
-    app: "./assets/js/index.js",
-    favorites: "./assets/js/favorites.js",
-    topic: "./assets/js/topic.js"
+    index: "./assets/js/index.js",
+    db: "./assets/js/db.js",
+
   },
   output: {
     path: __dirname + "/dist",
@@ -28,16 +28,16 @@ const config = {
   },
   plugins: [
     new WebpackPwaManifest({
-      name: "Newsy app",
-      short_name: "Newsy",
-      description: "An application that allows you to view different news articles and save your favorites.",
+      name: "Budget Tracker",
+      short_name: "Budget Tracker",
+      description: " This application allows you to track your funds and keep a good budget.",
       background_color: "#01579b",
       theme_color: "#ffffff",
-      "theme-color": "#ffffff",
+      theme_color: "#ffffff",
       start_url: "/",
       icons: [{
-        src: path.resolve("assets/images/icons/android-chrome-192x192.png"),
-        sizes: [96, 128, 192, 256, 384, 512],
+        src: path.resolve("./assets/images/icons/android-chrome-192x192.png"),
+        sizes: [16, 32, 192, 512],
         destination: path.join("assets", "icons")
       }]
     })
