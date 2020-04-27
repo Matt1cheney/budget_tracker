@@ -1,5 +1,7 @@
+require("dotenv").config()
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require("path");
 
 const PORT = process.env.PORT || 3000;
 
@@ -8,10 +10,15 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("client"));
-// app.use(express.static('dist'));
+jsDirectory = process.env.NODE_ENV === 'production' ? 'build' : 'dist';
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://matt1cheney:Gradybum33!@alphacluster-fbyr2.gcp.mongodb.net/budget?authSource=admin", {
+// app.use(express.static(path.join(__dirname, 'client', 'assets')));
+// app.use(express.static(path.join(__dirname, 'client',jsDirectory)));
+app.use(express.static("client"));
+app.use(express.static("assets"));
+app.use(express.static(jsDirectory));
+
+mongoose.connect(process.env.MONGODB_URI || process.env.ALPHA_CLUSTER , {
   useNewUrlParser: true,
   useFindAndModify: false
 });
