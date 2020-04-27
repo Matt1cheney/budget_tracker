@@ -18,7 +18,7 @@ app.use(express.static("client"));
 app.use(express.static("assets"));
 app.use(express.static(jsDirectory));
 
-mongoose.connect(process.env.MONGODB_URI || process.env.ALPHA_CLUSTER , {
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_DATABASE , {
   useNewUrlParser: true,
   useFindAndModify: false
 });
