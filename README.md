@@ -12,6 +12,7 @@
 ![lighthouse_audit](images/lighthouse_audit.png)
 ![manifest](images/manifest.png)
 ![webpacked](images/webpacked.png)
+![app](images/app.png)
 
   
 ## a little about the project
