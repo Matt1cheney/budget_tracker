@@ -7,11 +7,11 @@
 
 #### Matthew Cheney
 #### matt1cheney@gmail.com
-![home-site](images\home-site.png)
-![compressed](images\compressed.png)
-![lighthouse_audit](images\lighthouse_audit.png)
-![manifest](images\manifest.png)
-![webpacked](images\webpacked.png)
+![home-site](images/home-site.png)
+![compressed](images/compressed.png)
+![lighthouse_audit](images/lighthouse_audit.png)
+![manifest](images/manifest.png)
+![webpacked](images/webpacked.png)
 
   
 ## a little about the project
